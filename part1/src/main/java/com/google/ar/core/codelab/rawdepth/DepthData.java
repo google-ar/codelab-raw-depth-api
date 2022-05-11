@@ -38,7 +38,7 @@ public class DepthData {
 
     public static FloatBuffer create(Frame frame, Anchor cameraPoseAnchor) {
         try {
-            Image depthImage = frame.acquireRawDepthImage();
+            Image depthImage = frame.acquireRawDepthImage16Bits();
             Image confidenceImage = frame.acquireRawDepthConfidenceImage();
 
             // Retrieve the intrinsic camera parameters corresponding to the depth image to
